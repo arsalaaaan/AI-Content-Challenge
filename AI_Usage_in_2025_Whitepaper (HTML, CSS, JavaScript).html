@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How U.S. College Students Use AI in 2025: A Quantitative Snapshot | Writing AI, Paper AI, AI Assistant</title>
+    <meta name="description" content="Comprehensive research on AI adoption among U.S. college students in 2025. Discover how 91% of students use AI tools like ChatGPT for coursework, academic writing, and learning assistance.">
+    <meta name="keywords" content="Writing AI, Paper AI, AI Assistant, College AI, ChatGPT students, AI education, academic writing AI">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.7;
+            color: #2c3e50;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            background: #ffffff;
+            padding: 60px 50px 40px 50px;
+            border-bottom: 3px solid #34495e;
+        }
+        
+        .header h1 {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            color: #5d6d7e;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        
+        .executive-summary {
+            background: #ecf0f1;
+            padding: 25px;
+            border-left: 4px solid #34495e;
+            margin: 30px 0;
+        }
+        
+        .executive-summary h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .key-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+            padding: 20px 0;
+            border-top: 1px solid #bdc3c7;
+            border-bottom: 1px solid #bdc3c7;
+        }
+        
+        .stat-box {
+            text-align: center;
+            padding: 15px;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #5d6d7e;
+            margin-top: 5px;
+        }
+        
+        .content {
+            padding: 40px 50px;
+        }
+        
+        .section {
+            margin-bottom: 50px;
+        }
+        
+        h2 {
+            color: #2c3e50;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+            font-weight: 600;
+        }
+        
+        h3 {
+            color: #34495e;
+            font-size: 1.2rem;
+            margin: 30px 0 15px 0;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 18px;
+            text-align: justify;
+            font-size: 1rem;
+        }
+        
+        .insight-box {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 0;
+            border-left: 4px solid #3498db;
+        }
+        
+        .insight-box strong {
+            color: #2c3e50;
+        }
+        
+        .chart-placeholder {
+            background: #ffffff;
+            border: 2px solid #ecf0f1;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0;
+            color: #7f8c8d;
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: white;
+        }
+        
+        .data-table th {
+            background: #34495e;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .data-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .data-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .percentage-large {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .interactive-section {
+            background: #f8f9fa;
+            padding: 30px;
+            margin: 40px -50px;
+            border-top: 1px solid #dee2e6;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .filter-controls {
+            margin-bottom: 25px;
+        }
+        
+        .filter-btn {
+            background: #ffffff;
+            color: #2c3e50;
+            border: 2px solid #34495e;
+            padding: 10px 20px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+        
+        .filter-btn:hover {
+            background: #34495e;
+            color: white;
+        }
+        
+        .filter-btn.active {
+            background: #34495e;
+            color: white;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .tool-card {
+            background: white;
+            border: 1px solid #dee2e6;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .tool-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .tool-card h4 {
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        
+        .tool-percentage {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #34495e;
+            margin-bottom: 8px;
+        }
+        
+        .tool-description {
+            color: #5d6d7e;
+            font-size: 0.9rem;
+        }
+        
+        .faq-section {
+            background: white;
+            margin: 40px 0;
+        }
+        
+        .faq-section h2 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        
+        .faq-item {
+            border: 1px solid #dee2e6;
+            margin-bottom: 15px;
+        }
+        
+        .faq-question {
+            background: #f8f9fa;
+            padding: 20px;
+            cursor: pointer;
+            position: relative;
+            transition: background-color 0.3s ease;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .faq-question:hover {
+            background: #ecf0f1;
+        }
+        
+        .faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-question.active::after {
+            transform: translateY(-50%) rotate(45deg);
+        }
+        
+        .faq-answer {
+            background: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-answer.active {
+            max-height: 400px;
+            padding: 20px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+        }
+        
+        .comparison-table th {
+            background: #2c3e50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .comparison-table td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .year-2024 {
+            background: #ecf0f1;
+        }
+        
+        .year-2025 {
+            background: #d5dbdb;
+        }
+        
+        .methodology {
+            background: #f8f9fa;
+            padding: 30px;
+            margin: 40px -50px;
+            border-left: 4px solid #95a5a6;
+        }
+        
+        .methodology h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .methodology ul {
+            margin-left: 20px;
+        }
+        
+        .methodology li {
+            margin-bottom: 8px;
+            color: #5d6d7e;
+        }
+        
+        .conclusions {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 50px;
+            margin: 40px -50px 0 -50px;
+        }
+        
+        .conclusions h2 {
+            color: white;
+            border-bottom: 2px solid #34495e;
+        }
+        
+        .conclusions p {
+            color: #ecf0f1;
+        }
+        
+        .conclusions .insight-box {
+            background: rgba(255,255,255,0.1);
+            border-left: 4px solid #3498db;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                padding: 40px 25px;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .content {
+                padding: 30px 25px;
+            }
+            
+            .interactive-section {
+                margin: 40px -25px;
+                padding: 25px;
+            }
+            
+            .key-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .conclusions {
+                padding: 30px 25px;
+                margin: 40px -25px 0 -25px;
+            }
+            
+            .methodology {
+                margin: 40px -25px;
+                padding: 25px;
+            }
+        }
+        
+        .loading {
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>How U.S. College Students Use AI in 2025: A Quantitative Snapshot</h1>
+            <p class="subtitle">An Analysis of Writing AI, Paper AI, College AI, and AI Assistant Adoption in Higher Education</p>
+            
+            <div class="executive-summary">
+                <h3>Executive Summary</h3>
+                <p>Generative artificial intelligence moved from novelty to default study aid in less than two academic years. This comprehensive analysis examines the scale, patterns, and implications of AI adoption among U.S. college students in 2025, revealing a fundamental shift in academic practices and highlighting critical gaps in institutional support.</p>
+            </div>
+            
+            <div class="key-stats">
+                <div class="stat-box">
+                    <span class="stat-number">91%</span>
+                    <div class="stat-label">Students Use AI Tools</div>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">2.6</span>
+                    <div class="stat-label">Average Tools per Student</div>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">74%</span>
+                    <div class="stat-label">Use ChatGPT</div>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">29%</span>
+                    <div class="stat-label">Daily Users</div>
+                </div>
+            </div>
+
+            <div style="max-width: 600px; margin: 40px auto;">
+                <canvas id="summaryMetricsChart" width="600" height="300"></canvas>
+            </div>
+
+        </div>
+
+        <div class="content">
+            <!-- Introduction -->
+            <div class="section">
+                <h2>Research Overview</h2>
+                <p>Between the first public release of ChatGPT in late 2022 and the spring term of 2025, AI tools have become as visible on U.S. campuses as learning‑management systems or cloud drives. Yet the picture is uneven: adoption is high, confidence is middling, and ethical norms are still fluid.</p>
+                
+                <p>Drawing from five specified evidence sets—three public polls from Statista (2023–25), a 2024 Global AI Student Survey, synthetic survey data modeled after the Statista polls, and aggregated remarks from three Reddit discussions—this analysis maps the scale, shape, and sentiment of AI use among U.S. undergraduates in 2025.</p>
+            </div>
+
+            <!-- Mainstream Adoption -->
+            <div class="section">
+                <h2>Mainstream College AI Adoption</h2>
+                
+                <p>Nine in ten U.S. college students (91%) reported using at least one AI tool for coursework in spring 2025. This figure aligns with the Digital Education Council's global finding of 86% in 2024 and dramatically exceeds adult perceptions captured two years earlier when only 32% of U.S. adults believed students "usually" used AI, even illicitly.</p>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>2023 Adult Perception</th>
+                            <th>2024 Global Reality</th>
+                            <th>2025 U.S. Reality</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Overall AI Usage</strong></td>
+                            <td class="year-2024">32%</td>
+                            <td class="year-2024">86%</td>
+                            <td class="year-2025">91%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Daily Usage</strong></td>
+                            <td class="year-2024">—</td>
+                            <td class="year-2024">24%</td>
+                            <td class="year-2025">29%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Average Tools Used</strong></td>
+                            <td class="year-2024">—</td>
+                            <td class="year-2024">2.1</td>
+                            <td class="year-2025">2.6</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div style="max-width: 400px; margin: 30px auto;">
+                    <canvas id="aiUsageFrequencyChart" width="400" height="250"></canvas>
+                </div>
+
+                <div class="insight-box">
+                    <strong>Key Insight:</strong> Frequency has intensified as daily use rose from 24% globally in 2024 to 29% in the U.S. sample a year later. Counting "daily or weekly," the share reached 61%. AI is no longer a last‑minute rescue but an embedded habit.
+                </div>
+            </div>
+
+            <!-- AI Tools Usage -->
+            <div class="interactive-section">
+                <h2>Popular Writing AI Tools Among Students</h2>
+                <p>Students report using an average of 2.6 AI tools, with usage distribution being top-heavy. ChatGPT leads by a wide margin, but diversification is clear with 43% of respondents using at least one non-ChatGPT model.</p>
+                
+                <div class="filter-controls">
+                    <button class="filter-btn active" onclick="filterTools('all')">All Tools</button>
+                    <button class="filter-btn" onclick="filterTools('writing')">Writing AI</button>
+                    <button class="filter-btn" onclick="filterTools('research')">Research AI</button>
+                    <button class="filter-btn" onclick="filterTools('coding')">Coding Support</button>
+                </div>
+                
+                <div class="tools-grid" id="toolsGrid">
+                    <div class="tool-card" data-category="writing research">
+                        <h4>ChatGPT</h4>
+                        <div class="tool-percentage">74%</div>
+                        <p class="tool-description">Dominant AI assistant for writing, research, and general academic support</p>
+                    </div>
+                    <div class="tool-card" data-category="research">
+                        <h4>Google Gemini</h4>
+                        <div class="tool-percentage">32%</div>
+                        <p class="tool-description">Research assistance and information gathering</p>
+                    </div>
+                    <div class="tool-card" data-category="writing">
+                        <h4>Grammarly</h4>
+                        <div class="tool-percentage">30%</div>
+                        <p class="tool-description">Grammar checking and writing enhancement</p>
+                    </div>
+                    <div class="tool-card" data-category="writing coding">
+                        <h4>Microsoft Copilot</h4>
+                        <div class="tool-percentage">24%</div>
+                        <p class="tool-description">Writing assistance and programming support</p>
+                    </div>
+                    <div class="tool-card" data-category="writing">
+                        <h4>QuillBot</h4>
+                        <div class="tool-percentage">21%</div>
+                        <p class="tool-description">Paraphrasing and content rewriting</p>
+                    </div>
+                    <div class="tool-card" data-category="research">
+                        <h4>Perplexity</h4>
+                        <div class="tool-percentage">19%</div>
+                        <p class="tool-description">AI-powered search and research platform</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Academic Use Cases -->
+            <div class="section">
+                <h2>Academic Use Cases (AI Assistants)</h2>
+                
+                <p>Students in 2025 are using AI tools for a wide range of study tasks, showing clear growth from 2024. We compared global AI use in 2024 with U.S. AI use in 2025 and found a significant increase in every category.</p>
+
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Use Case</th>
+                            <th>2024 Global</th>
+                            <th>2025 U.S.</th>
+                            <th>Growth</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Information Search</td>
+                            <td>66%</td>
+                            <td class="percentage-large">74%</td>
+                            <td>+8pp</td>
+                        </tr>
+                        <tr>
+                            <td>Grammar Checking</td>
+                            <td>44%</td>
+                            <td class="percentage-large">49%</td>
+                            <td>+5pp</td>
+                        </tr>
+                        <tr>
+                            <td>Text Summarization</td>
+                            <td>35%</td>
+                            <td class="percentage-large">41%</td>
+                            <td>+6pp</td>
+                        </tr>
+                        <tr>
+                            <td>Paraphrasing</td>
+                            <td>28%</td>
+                            <td class="percentage-large">35%</td>
+                            <td>+7pp</td>
+                        </tr>
+                        <tr>
+                            <td>Draft Writing</td>
+                            <td>24%</td>
+                            <td class="percentage-large">31%</td>
+                            <td>+7pp</td>
+                        </tr>
+                        <tr>
+                            <td>Study Questions</td>
+                            <td>21%</td>
+                            <td class="percentage-large">26%</td>
+                            <td>+5pp</td>
+                        </tr>
+                        <tr>
+                            <td>Coding Support</td>
+                            <td>14%</td>
+                            <td class="percentage-large">19%</td>
+                            <td>+5pp</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="insight-box">
+                    <strong>Trend Analysis:</strong> The upward shift of every category (5-to-8 percentage points) in just one year suggests functional "stickiness": once students learn an AI‑supported workflow—especially for search and summarization—they embed it in recurring study routines.
+                </div>
+
+                <div style="max-width: 700px; margin: 0 auto;">
+                    <canvas id="useCasesChart" width="700" height="350"></canvas>
+                </div>
+            </div>
+
+            <!-- Confidence Gap -->
+            <div class="section">
+                <h2>The AI Literacy and Confidence Gap</h2>
+                
+                <p>While AI use among college students is growing rapidly, many still feel uncertain about their abilities. This represents a critical challenge for higher education institutions implementing AI technologies.</p>
+
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Confidence Metric</th>
+                            <th>2024 Global</th>
+                            <th>2025 U.S.</th>
+                            <th>Trend</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lack sufficient AI knowledge/skills</td>
+                            <td>58%</td>
+                            <td class="percentage-large">62%</td>
+                            <td>↑ +4pp</td>
+                        </tr>
+                        <tr>
+                            <td>Unprepared for AI-driven workforce</td>
+                            <td>48%</td>
+                            <td class="percentage-large">53%</td>
+                            <td>↑ +5pp</td>
+                        </tr>
+                        <tr>
+                            <td>University not doing enough</td>
+                            <td>48%</td>
+                            <td class="percentage-large">53%</td>
+                            <td>↑ +5pp</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="insight-box">
+                    <strong>Equity Issue:</strong> The gap is widest among first‑generation college students, who were 11 percentage points more likely than legacy peers to doubt their AI skills—an equity issue seldom noted in broader tech‑optimism narratives.
+                </div>
+            </div>
+
+            <!-- Student Segmentation -->
+            <div class="section">
+                <h2>Usage Patterns by Student Demographics</h2>
+                
+                <h3>By Academic Major</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Major Category</th>
+                            <th>Average Tools Used</th>
+                            <th>Top Use Case</th>
+                            <th>Daily Usage Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>STEM</strong></td>
+                            <td>3.2</td>
+                            <td>Coding Support (31%)</td>
+                            <td>27%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Humanities</strong></td>
+                            <td>2.4</td>
+                            <td>Paraphrasing (44%)</td>
+                            <td>26%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Business</strong></td>
+                            <td>2.8</td>
+                            <td>Resume Building (76%)</td>
+                            <td>33%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Social Sciences</strong></td>
+                            <td>2.3</td>
+                            <td>Research (71%)</td>
+                            <td>25%</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>By Engagement Level</h3>
+                <p>Students who use AI daily (29%) report significantly higher confidence in their AI skills—scoring 0.38 standard deviations above weekly users. However, this confidence comes with caution, as daily users also show greater concern about academic integrity, scoring 0.24 standard deviations higher on that measure.</p>
+
+                <div style="max-width: 700px; margin: 0 auto;">
+                    <canvas id="segmentationChart" width="700" height="350"></canvas>
+                </div>
+            </div>
+
+            <!-- Institutional Support -->
+            <div class="section">
+                <h2>Institutional Support Expectations</h2>
+                
+                <p>When students were asked what they want from their universities, their top priorities remained steady from 2024 to 2025, with only slight shifts in percentage.</p>
+
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Support Type</th>
+                            <th>2024 Global</th>
+                            <th>2025 U.S.</th>
+                            <th>Priority Ranking</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Faculty AI Training</td>
+                            <td>73%</td>
+                            <td class="percentage-large">77%</td>
+                            <td>1st</td>
+                        </tr>
+                        <tr>
+                            <td>Student AI Training</td>
+                            <td>72%</td>
+                            <td class="percentage-large">76%</td>
+                            <td>2nd</td>
+                        </tr>
+                        <tr>
+                            <td>AI-Literacy Courses</td>
+                            <td>71%</td>
+                            <td class="percentage-large">75%</td>
+                            <td>3rd</td>
+                        </tr>
+                        <tr>
+                            <td>Input on AI Tool Selection</td>
+                            <td>68%</td>
+                            <td class="percentage-large">72%</td>
+                            <td>4th</td>
+                        </tr>
+                        <tr>
+                            <td>More AI in Teaching</td>
+                            <td>60%</td>
+                            <td class="percentage-large">63%</td>
+                            <td>5th</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="insight-box">
+                    <strong>Faculty-Centered Approach:</strong> Students view professors—not just tech staff—as the key guides in navigating AI-powered learning. Demand for faculty upskilling grew most (+4pp), hinting that students see professors as front‑line AI mentors.
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        What are the most commonly used AI tools among college students?
+                    </div>
+                    <div class="faq-answer">
+                        <p>ChatGPT dominates with 74% usage, followed by Google Gemini (32%), Grammarly (30%), Microsoft Copilot (24%), QuillBot (21%), and Perplexity (19%). Students use an average of 2.6 different AI tools, with 43% using at least one non-ChatGPT model.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        How do academic majors influence AI tool usage patterns?
+                    </div>
+                    <div class="faq-answer">
+                        <p>STEM students use the most diverse range of tools (3.2 average) with 31% using AI for coding support. Humanities students lead in paraphrasing (44%) and draft polishing (38%). Business students are the most frequent daily users (33%), often focusing on resume building and career preparation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        What concerns do students have about AI usage in academics?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Major concerns include: 62% feel they lack sufficient AI knowledge, 53% feel unprepared for AI-driven workforces, 53% believe universities provide inadequate support, and 41% worry about AI hurting originality. Students also fear false-positive detection by AI plagiarism tools.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        What institutional support do students want most?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Top priorities include faculty AI training (77%), student AI training (76%), AI-literacy courses (75%), input on AI tool selection (72%), and increased AI integration in teaching (63%). Students emphasize wanting guidance from professors, not just IT departments.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        How has AI usage growth compared between 2024 and 2025?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Every academic use case showed growth of 5-8 percentage points. Information search grew from 66% to 74%, grammar checking from 44% to 49%, and paraphrasing from 28% to 35%. These shifts suggest that once students integrate AI into one study routine, they often expand its use to other tasks.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Are students confident in their ability to use AI tools effectively?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Confidence remains mixed. While 91% of students use AI, 62% report lacking sufficient AI knowledge. Confidence is higher among daily users, but even they express concerns about ethical use and academic integrity. The confidence gap is especially wide among first-generation college students.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Do students believe their universities are adapting to AI fast enough?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Many students do not think so. Over half (53%) say their university isn’t doing enough to prepare them for an AI-driven future. Students want more training, better integration of AI into the curriculum, and greater involvement in decisions around tool selection.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        What ethical concerns do students raise about using AI?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Students express concern about originality, overreliance on AI, and the risk of AI-generated plagiarism. Some worry about bias in tools or misuses that violate academic integrity policies. There's also frustration over false flags in AI-detection software wrongly accusing them of cheating.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        What does the future of AI in higher education look like based on this data?
+                    </div>
+                    <div class="faq-answer">
+                        <p>The data points to sustained growth and normalization of AI in learning. Students are integrating AI into everyday study habits, and institutions will need to respond with thoughtful policies, inclusive training programs, and support systems to bridge gaps in access and understanding.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+<footer style="background: #2c3e50; color: #ecf0f1; padding: 30px 50px; margin-top: 40px;">
+    <div style="max-width: 1000px; margin: 0 auto;">
+        <p style="font-size: 0.95rem; margin-bottom: 10px;">
+            © 2025 Livingston’s AI Challenge. All rights reserved.
+        </p>
+        <p style="font-size: 0.9rem; margin-bottom: 10px;">
+            This white paper is part of a research-based educational project on <strong>Writing AI</strong>, <strong>Paper AI</strong>, <strong>College AI</strong>, and <strong>AI Assistants in higher education</strong>.
+        </p>
+        <p style="font-size: 0.85rem; color: #bdc3c7;">
+            Last updated: July 2, 2025 
+        </p>
+        
+    </div>
+</footer>
+
+            <script>
+// Toggle FAQ answers
+function toggleFAQ(element) {
+    const answer = element.nextElementSibling;
+    const isActive = element.classList.contains("active");
+
+    document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('active'));
+    document.querySelectorAll('.faq-answer').forEach(a => {
+        a.classList.remove('active');
+        a.style.maxHeight = null;
+        a.style.padding = '0';
+    });
+
+    if (!isActive) {
+        element.classList.add("active");
+        answer.classList.add("active");
+        answer.style.maxHeight = answer.scrollHeight + "px";
+        answer.style.padding = "20px";
+    }
+}
+
+// Filter AI tools by category
+function filterTools(category) {
+    const buttons = document.querySelectorAll(".filter-btn");
+    buttons.forEach(btn => btn.classList.remove("active"));
+    
+    const activeBtn = Array.from(buttons).find(btn => btn.textContent.toLowerCase().includes(category));
+    if (activeBtn) activeBtn.classList.add("active");
+
+    const tools = document.querySelectorAll(".tool-card");
+    tools.forEach(tool => {
+        const toolCategory = tool.getAttribute("data-category");
+        if (category === "all" || toolCategory.includes(category)) {
+            tool.style.display = "block";
+        } else {
+            tool.style.display = "none";
+        }
+    });
+}
+
+// Optional: Set default filter on load
+document.addEventListener("DOMContentLoaded", () => {
+    filterTools('all');
+});
+</script>
+
+
+<script>
+    // Academic Use Cases Year-over-Year Growth Chart
+    const ctx1 = document.getElementById('useCasesChart').getContext('2d');
+    new Chart(ctx1, {
+        type: 'bar',
+        data: {
+            labels: ['Information Search', 'Grammar Checking', 'Text Summarization', 'Paraphrasing', 'Draft Writing', 'Study Questions', 'Coding Support'],
+            datasets: [
+                {
+                    label: '2024 Global',
+                    data: [66, 44, 35, 28, 24, 21, 14],
+                    backgroundColor: 'rgba(52, 152, 219, 0.6)'
+                },
+                {
+                    label: '2025 U.S.',
+                    data: [74, 49, 41, 35, 31, 26, 19],
+                    backgroundColor: 'rgba(46, 204, 113, 0.6)'
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'AI Academic Use Cases: 2024 vs 2025'
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        callback: value => value + '%'
+                    }
+                }
+            }
+        }
+    });
+
+    // Student Segmentation Chart
+    const ctx2 = document.getElementById('segmentationChart').getContext('2d');
+    new Chart(ctx2, {
+        type: 'bar',
+        data: {
+            labels: ['STEM', 'Humanities', 'Business', 'Social Sciences'],
+            datasets: [
+                {
+                    label: 'Avg Tools Used',
+                    data: [3.2, 2.4, 2.8, 2.3],
+                    backgroundColor: 'rgba(155, 89, 182, 0.6)'
+                },
+                {
+                    label: 'Daily Usage (%)',
+                    data: [27, 26, 33, 25],
+                    backgroundColor: 'rgba(241, 196, 15, 0.6)'
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'AI Usage by Academic Major (2025)'
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+<script>
+    // AI Usage Frequency Chart
+    const ctx3 = document.getElementById('aiUsageFrequencyChart').getContext('2d');
+    new Chart(ctx3, {
+        type: 'doughnut',
+        data: {
+            labels: ['Daily', 'Weekly', 'Monthly', 'Rarely', 'Never'],
+            datasets: [{
+                label: 'Frequency of AI Use',
+                data: [38, 35, 15, 8, 4],
+                backgroundColor: [
+                    'rgba(46, 204, 113, 0.8)',  // Daily - Green
+                    'rgba(52, 152, 219, 0.8)',  // Weekly - Blue
+                    'rgba(241, 196, 15, 0.8)',  // Monthly - Yellow
+                    'rgba(230, 126, 34, 0.8)',  // Rarely - Orange
+                    'rgba(231, 76, 60, 0.8)'    // Never - Red
+                ],
+                borderColor: '#ffffff',
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Frequency of AI Use Among U.S. College Students (2025)',
+                    font: {
+                        size: 16
+                    }
+                },
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        }
+    });
+</script>
+
+<script>
+    const ctx4 = document.getElementById('summaryMetricsChart').getContext('2d');
+    new Chart(ctx4, {
+        type: 'bar',
+        data: {
+            labels: ['Students Use AI Tools', 'Average Tools per Student', 'Use ChatGPT', 'Daily Users'],
+            datasets: [{
+                label: '2025 Snapshot',
+                data: [91, 2.6, 74, 29],
+                backgroundColor: [
+                    'rgba(46, 204, 113, 0.9)',  // green
+                    'rgba(52, 152, 219, 0.9)',  // blue
+                    'rgba(155, 89, 182, 0.9)',  // purple
+                    'rgba(241, 196, 15, 0.9)'   // yellow
+                ],
+                borderRadius: 10,
+                barThickness: 25
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            responsive: true,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'AI Usage Summary Metrics (2025)',
+                    font: {
+                        size: 18
+                    }
+                },
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            let label = context.label;
+                            let value = context.raw;
+                            return label + ': ' + value + (label === 'Average Tools per Student' ? '' : '%');
+                        }
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    beginAtZero: true,
+                    ticks: {
+                        callback: function(value, index, values) {
+                            return value + (value > 10 ? '%' : '');
+                        }
+                    },
+                    grid: {
+                        drawBorder: false,
+                        color: '#ecf0f1'
+                    }
+                },
+                y: {
+                    ticks: {
+                        font: {
+                            weight: 'bold'
+                        }
+                    },
+                    grid: {
+                        display: false
+                    }
+                }
+            }
+        }
+    });
+</script>
+
+
+</body>            
